@@ -15,12 +15,8 @@ if [ -f $base/sources.list ]; then
 	dst="/etc/apt/sources.list"
 	oldmd5=`md5sum $dst`
 
-	if [ -h $dst ]; then
-		rm -f $dst
-	else
-		save_original_config $dst
-	fi
-
+	remove_link $dst
+	save_original_config $dst
 	install_copy $base/sources.list $dst
 	newmd5=`md5sum $dst`
 
