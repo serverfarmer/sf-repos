@@ -11,3 +11,4 @@ tofrodos
 cron-apt
 ntpdate
 debsums
+net-tools
