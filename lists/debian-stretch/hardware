@@ -7,3 +7,4 @@ iptraf
 sysstat
 firmware-linux
 firmware-realtek
+bridge-utils
