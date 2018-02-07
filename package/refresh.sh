@@ -1,5 +1,5 @@
 #!/bin/sh
-. /opt/farm/scripts/init
+. /etc/farmconfig
 
 
 if [ "$OSTYPE" = "debian" ]; then

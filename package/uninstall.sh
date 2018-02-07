@@ -1,5 +1,5 @@
 #!/bin/sh
-. /opt/farm/scripts/init
+. /etc/farmconfig
 . /opt/farm/scripts/functions.install
 
 

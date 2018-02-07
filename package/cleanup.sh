@@ -1,5 +1,5 @@
 #!/bin/sh
-. /opt/farm/scripts/init
+. /etc/farmconfig
 
 
 if [ -x /etc/local/hooks/pre-upgrade.sh ]; then
