@@ -14,9 +14,10 @@ install_cpan() {
 
 
 if [ "$1" = "" ]; then
-	echo "usage: $0 <package>"
+	echo "usage: $0 <package> [package] [...]"
 	exit
 fi
 
-package=$1
-install_cpan $package
+for package in $@; do
+	install_cpan $package
+done
