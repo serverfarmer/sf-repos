@@ -1,7 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 . /opt/farm/scripts/init
-. /opt/farm/scripts/functions.custom
-. /opt/farm/scripts/functions.install
 
 
 if [ "$1" = "" ]; then
@@ -11,7 +9,6 @@ fi
 
 lists=/opt/farm/ext/repos/lists/$OSVER
 list=$1
-
 
 if [ -f $lists/$list ]; then
 	for p in `cat $lists/$list`; do
@@ -27,6 +24,6 @@ fi
 
 if [ -f $lists/$list.cpan ]; then
 	for p in `cat $lists/$list.cpan`; do
-		install_cpan $p
+		/opt/farm/ext/repos/package/install-cpan.sh $p
 	done
 fi
