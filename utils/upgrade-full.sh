@@ -8,6 +8,8 @@ fi
 
 if [ "$OSTYPE" = "debian" ]; then
 	apt-get dist-upgrade
+elif [ "$OSTYPE" = "qnap" ]; then
+	ipkg upgrade
 else
 	echo "upgrade not implemented on $OSTYPE system"
 fi

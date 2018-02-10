@@ -46,6 +46,14 @@ uninstall_pkgin() {
 	fi
 }
 
+uninstall_ipkg() {
+	pkg=$1
+	if [ "`ipkg list_installed |grep ^\"$pkg -\"`" != "" ]; then
+		echo "uninstalling package $pkg"
+		ipkg remove $pkg
+	fi
+}
+
 
 if [ "$1" = "" ]; then
 	echo "usage: $0 <package> [package] [...]"
@@ -65,6 +73,8 @@ for package in $@; do
 		uninstall_pkgin $package
 	elif [ "$OSTYPE" = "freebsd" ]; then
 		uninstall_pkg $package
+	elif [ "$OSTYPE" = "qnap" ]; then
+		uninstall_ipkg $package
 	fi
 done
 

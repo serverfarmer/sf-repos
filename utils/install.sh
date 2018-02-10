@@ -67,6 +67,14 @@ install_pkgin() {
 	fi
 }
 
+install_ipkg() {
+	pkg=$1
+	echo "checking for optware ipkg package $pkg"
+	if [ "`ipkg list_installed |grep ^\"$pkg -\"`" = "" ]; then
+		echo "installing package $pkg"
+		ipkg install $pkg
+	fi
+}
 
 
 if [ "$1" = "" ]; then
@@ -85,5 +93,7 @@ for package in $@; do
 		install_pkgin $package
 	elif [ "$OSTYPE" = "freebsd" ]; then
 		install_pkg $package
+	elif [ "$OSTYPE" = "qnap" ]; then
+		install_ipkg $package
 	fi
 done
