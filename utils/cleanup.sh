@@ -8,8 +8,13 @@ fi
 
 if [ "$OSTYPE" = "debian" ]; then
 	apt-get autoremove && apt-get autoremove
+elif [ "$OSTYPE" = "redhat" ]; then
+	echo "cleanup not required on RHEL"
+elif [ "$OSTYPE" = "netbsd" ]; then
+	pkgin autoremove
+	pkgin clean
 else
-	echo "cleanup after upgrade not implemented on $OSTYPE system"
+	echo "cleanup not implemented on $OSTYPE system"
 fi
 
 if [ -x /etc/local/hooks/post-upgrade.sh ]; then
