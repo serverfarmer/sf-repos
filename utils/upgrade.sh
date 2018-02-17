@@ -8,6 +8,8 @@ fi
 
 if [ "$OSTYPE" = "debian" ]; then
 	apt-get upgrade
+elif [ "$OSTYPE" = "redhat" ]; then
+	yum update
 elif [ "$OSTYPE" = "qnap" ]; then
 	ipkg upgrade
 else
