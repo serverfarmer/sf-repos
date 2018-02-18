@@ -14,6 +14,8 @@ elif [ "$OSTYPE" = "suse" ]; then
 	aptitude upgrade
 elif [ "$OSTYPE" = "netbsd" ]; then
 	pkgin upgrade
+elif [ "$OSTYPE" = "freebsd" ]; then
+	pkg upgrade
 elif [ "$OSTYPE" = "qnap" ]; then
 	ipkg upgrade
 else

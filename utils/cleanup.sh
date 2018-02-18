@@ -15,6 +15,8 @@ elif [ "$OSTYPE" = "suse" ]; then
 elif [ "$OSTYPE" = "netbsd" ]; then
 	pkgin autoremove
 	pkgin clean
+elif [ "$OSTYPE" = "freebsd" ]; then
+	pkg autoremove
 else
 	echo "cleanup not implemented on $OSTYPE system"
 fi

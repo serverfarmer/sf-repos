@@ -10,6 +10,8 @@ elif [ "$OSTYPE" = "suse" ]; then
 	aptitude update
 elif [ "$OSTYPE" = "netbsd" ]; then
 	pkgin update
+elif [ "$OSTYPE" = "freebsd" ]; then
+	pkg update
 elif [ "$OSTYPE" = "qnap" ]; then
 	ipkg update
 else
