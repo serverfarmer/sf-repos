@@ -10,6 +10,8 @@ if [ "$OSTYPE" = "debian" ]; then
 	apt-get dist-upgrade
 elif [ "$OSTYPE" = "redhat" ]; then
 	yum upgrade
+elif [ "$OSTYPE" = "suse" ]; then
+	aptitude dist-upgrade
 elif [ "$OSTYPE" = "netbsd" ]; then
 	pkgin full-upgrade
 elif [ "$OSTYPE" = "qnap" ]; then

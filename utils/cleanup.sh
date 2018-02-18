@@ -10,6 +10,8 @@ if [ "$OSTYPE" = "debian" ]; then
 	apt-get autoremove && apt-get autoremove
 elif [ "$OSTYPE" = "redhat" ]; then
 	echo "cleanup not required on RHEL"
+elif [ "$OSTYPE" = "suse" ]; then
+	echo "cleanup not required on SuSE"
 elif [ "$OSTYPE" = "netbsd" ]; then
 	pkgin autoremove
 	pkgin clean
