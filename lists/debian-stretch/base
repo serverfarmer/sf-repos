@@ -4,7 +4,7 @@ unzip
 zip
 ssh
 rsync
-gnupg
+gnupg1
 curl
 mc
 tofrodos
