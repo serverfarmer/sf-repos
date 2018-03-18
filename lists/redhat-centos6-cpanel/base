@@ -9,6 +9,7 @@ unix2dos
 dos2unix
 man
 ntpdate
+rkhunter
 patch
 dbus
 dbus-python

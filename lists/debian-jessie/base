@@ -11,6 +11,7 @@ tofrodos
 cron-apt
 ntpdate
 debsums
+rkhunter
 sysvinit-utils
 sysvinit-core
 sysvinit

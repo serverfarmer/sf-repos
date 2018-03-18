@@ -11,4 +11,5 @@ tofrodos
 cron-apt
 ntpdate
 debsums
+rkhunter
 net-tools
