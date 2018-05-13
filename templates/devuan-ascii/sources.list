@@ -1,0 +1,14 @@
+# 
+
+# deb cdrom:[devuan_ascii_2.0.0_amd64_netinst]/ ascii main non-free
+
+#deb cdrom:[devuan_ascii_2.0.0_amd64_netinst]/ ascii main non-free
+
+deb http://pl.deb.devuan.org/merged ascii main
+deb-src http://pl.deb.devuan.org/merged ascii main
+
+deb http://pl.deb.devuan.org/merged ascii-security main
+deb-src http://pl.deb.devuan.org/merged ascii-security main
+
+deb http://packages.devuan.org/devuan ascii main
+deb-src http://packages.devuan.org/devuan ascii main
