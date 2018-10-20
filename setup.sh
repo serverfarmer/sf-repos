@@ -25,3 +25,6 @@ if [ -f $base/sources.list ]; then
 	fi
 fi
 
+if [ -f /etc/update-manager/release-upgrades ]; then
+	sed -i 's/^Prompt.*/Prompt=never/' /etc/update-manager/release-upgrades
+fi
