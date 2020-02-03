@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 . /opt/farm/scripts/init
-. /opt/farm/scripts/functions.custom
 . /opt/farm/scripts/functions.install
 
 
 base=/opt/farm/ext/repos/templates/$OSVER
 
 if [ -f $base/listchanges.tpl ]; then
+	domain=`/opt/farm/config/get-external-domain.sh`
 	rm -f /etc/apt/listchanges.conf  # remove previous softlink
-	cat $base/listchanges.tpl |sed s/%%domain%%/`external_domain`/g >/etc/apt/listchanges.conf
+	cat $base/listchanges.tpl |sed s/%%domain%%/$domain/g >/etc/apt/listchanges.conf
 fi
 
 if [ -f $base/sources.list ]; then
